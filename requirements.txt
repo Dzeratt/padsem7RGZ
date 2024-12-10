@@ -1,0 +1,7 @@
+Flask
+psycopg2
+pytest
+bandit
+flask-login
+flask-limiter
+werkzeug
