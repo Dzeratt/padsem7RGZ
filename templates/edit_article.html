@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form action="{{ url_for('edit_article', article_id=article[0]) }}" method="POST">
+    <input type="hidden" name="_method" value="PUT">  <!-- Это необходимо, чтобы Flask понял, что запрос PUT -->
+    <label for="title">Title:</label>
+    <input type="text" name="title" value="{{ article[1] }}" required><br><br>
+
+    <label for="content">Content:</label><br>
+    <textarea name="content" rows="4" cols="50" required>{{ article[2] }}</textarea><br><br>
+
+    <button type="submit">Update Article</button>
+</form>
+
+</body>
+</html>
